@@ -1,0 +1,78 @@
+html, body, *{
+    margin:0;
+}
+.page-header {
+    background-color:rgb(35, 28, 77);
+    height: 60px;
+    border: gray;
+    display: flex;
+    justify-items: right;
+    justify-content: space-between;
+    align-items: center;
+    text-orientation: sideways;
+    color: white;
+    margin: 0;
+}
+.profile-background{
+    display: flex;
+    margin: 10px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;  
+    position: relative;
+    float:left;
+}
+img.background-pic{
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; 
+    height: 300px;
+    width: 1240px;
+}
+.profile-picture{
+    margin: 10px;
+    padding: 200px 0 0 0;
+    position: absolute;
+}
+img.profile-pic{
+    height: 150px;
+    border-radius: 50%;
+}
+.login-button{
+    background-color: transparent;
+    border: 0;
+    color: white;
+}
+.login-button:hover{
+    border-style: solid;
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+.navegation-header{
+    background-color: rgb(35, 28, 77);
+    height: 50px;
+    align-content: center;
+    justify-items: center;
+    justify-content: space-around
+}
+.navegation-button{
+    border-color: transparent;
+    background-color: transparent;
+    color: white;
+    margin:10px;
+}
+.navegation-button:hover{
+    color: white;
+    background-color:transparent;
+    display:inline-block;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+}
+.page-text{
+}
+p{
+    padding: 5px;
+}
+main{
+    font: bold;
+}
