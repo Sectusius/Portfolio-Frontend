@@ -22,14 +22,14 @@ a, a:visited, a:hover, a:active{
 }
 .profile-background{
     display: flex;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     justify-items: center;
     justify-content: center;
     align-content: center;  
     position: relative;
-    float:left;
 }
 img.background-pic{
+    margin: 10px 0px 0px 0px;
     border-top-left-radius: 20px; 
     border-top-right-radius: 20px; 
     height: 300px;
@@ -38,11 +38,13 @@ img.background-pic{
 .profile-picture{
     margin: 10px;
     padding: 200px 0 0 0;
-    position: absolute;
 }
 img.profile-pic{
     height: 150px;
     border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 0px;
 }
 .login-button{
     background-color: transparent;
@@ -78,19 +80,23 @@ img.profile-pic{
 p{
     padding: 5px;
 }
-.acerca_de{
+#acerca_de{
         
 }
-.proyectos{
+#proyectos{
 }
-.experiencia{
+#experiencia{
 
 }
-.educacion{
+#educacion{
 
 }
-.hard_soft_skills{
+#hard_soft_skills{
 
+}
+.profile_text{
+    margin-top: 40px;
+    margin-left: 10px;
 }
 main{
     font: bold;
