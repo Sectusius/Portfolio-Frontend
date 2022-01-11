@@ -7,7 +7,6 @@ body{
 a, a:visited, a:hover, a:active{
     padding: 3px 3px 3px 3px;
     color:inherit;    
-    target="_blank";
 }
 .page-header {
     background-color:rgb(65, 60, 95);
