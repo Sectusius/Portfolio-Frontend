@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { AppRouting } from '../app-routing.module.ts/app-routing.module.ts.module';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent{
 
   header = {
     name: 'Ian Petraccaro Cantero',
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  
   ngOnInit(): void {
   }
 

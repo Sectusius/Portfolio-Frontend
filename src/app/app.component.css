@@ -1,15 +1,4 @@
-import
-html, body, *{
-    margin:0;   
-}
-body{
-    background-color: rgb(127, 121, 165);
-}
-p{
-    padding: 5px;
-}
 #acerca_de{
-        
 }
 #proyectos{
 }
@@ -21,6 +10,11 @@ p{
 }
 #hard_soft_skills{
 
+}
+back_to_top{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
 }
 main{
     font: bold;
