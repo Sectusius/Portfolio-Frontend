@@ -1,5 +1,8 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppRouting } from '../app-routing.module.ts/app-routing.module.ts.module';
+import { AuthGuard } from '../auth.guard';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +19,13 @@ export class HeaderComponent{
     login_button:'LOGIN',
   }
 
-  constructor() { }
+
+  constructor(private router:Router, public auth:AuthService) { }
+
+  login(){
+    this.router.navigateByUrl('/Login');
+  }
+
 
   
   ngOnInit(): void {
