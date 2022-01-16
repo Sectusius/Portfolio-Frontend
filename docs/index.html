@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
   <title>Portfolio-Petraccaro_Cantero_Ian</title>
-  <base href="https://sectusius.github.io/Home">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/Images/rsz_gator.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -10,6 +10,19 @@
   <style type="text/css">@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialicons/v121/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');}.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;}</style>
 <style>html,body,*{margin:0}body{background-color:#7f79a5}</style><link rel="stylesheet" href="styles.604944c474b409ce.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.604944c474b409ce.css"></noscript></head>
 <body>
+  <script>
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
   <app-root></app-root>
 <script src="runtime.f0e68c8330ff7d89.js" type="module"></script><script src="polyfills.bcdfd71715700722.js" type="module"></script><script src="main.603d87b9d7bb12c1.js" type="module"></script>
 
