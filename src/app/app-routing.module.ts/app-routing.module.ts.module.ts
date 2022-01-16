@@ -13,7 +13,7 @@ const routes: Routes=[
   {path: 'Login', component: LoginWindowComponent},
   {path: '', redirectTo:'/Home', pathMatch:'full'},
   {path: 'error', component: ErrorPageComponent},
-  {path: '**', redirectTo:'/error', pathMatch:'full'},
+  {path: '**', redirectTo:'/error'},
   {path: 'profile', component:ProfileEditComponent, canActivate:[AuthGuard]},
 ]
 @NgModule({
