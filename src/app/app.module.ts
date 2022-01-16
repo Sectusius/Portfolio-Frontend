@@ -13,11 +13,13 @@ import { MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MessageComponent } from './message/message.component';
-import { AppRouting } from './app-routing.module.ts/app-routing.module.ts.module';
+import { AppRoutingModule } from './app-routing.module.ts/app-routing.module.ts.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,8 +33,11 @@ import { HttpClientModule } from '@angular/common/http';
     ErrorPageComponent,
     ScrollToTopComponent,
     ProfileEditComponent,
+    HomeComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatInputModule,
@@ -40,7 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatFormFieldModule,
     MatDialogModule,
-    AppRouting,
+    AppRoutingModule,
     HttpClientModule
   ],
   providers: [],

@@ -1,20 +1,49 @@
-<body>
+<div>
 <mat-card>
     <mat-card-header>
         <mat-card-title>
-            Login form
+           Iniciar Sesion
         </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <form>
+        <form [formGroup]="form" (ngSubmit)="onSend($event)">
+            <div>
             <mat-form-field>
-                <input matInput placeholder="Email" type="email" name="email" required>
+                <input matInput placeholder="Email" type="email" name="email" formControlName="email" required>
             </mat-form-field>
+            <div *ngIf="Mail?.errors && Mail?.touched">
+                <p *ngIf="Mail?.hasError('required')" class="error">
+                    Mail required.
+                </p>
+                <p *ngIf="Mail?.hasError('email')" class="error">
+                    Invalid format.
+                </p>
+            </div>
+            </div>
+            <div>
             <mat-form-field>
-                <input matInput placeholder="Password" type="password" name="password" required>
+                <input matInput placeholder="Password" type="password" formControlName="password" required>
             </mat-form-field>
-        </form>
-        <button (click)="login()">Confirm</button>
+            <div *ngIf="Password?.hasError && Password?.touched">
+                    <p *ngIf="Password?.hasError('required')" class="error">
+                      Password Required.
+                    </p>
+                    <p *ngIf="Password?.errors?.['minlength'] "class="error">
+                      The password requires more than 8 characters.
+                    </p>
+            </div>
+            </div>
+            <br>
+        <div>
+            <a routerLink="/Home">Forgot password?</a>
+            <a routerLink="/Home">Sign up</a>   
+        </div>
+        <br>
+        <div>
+            <button class="login-button" type="submit">Confirm</button>
+            <button class="login-button" routerLink="/Home">Go Back</button>
+        </div>
+    </form>
     </mat-card-content>
 </mat-card>
-</body>
+</div>

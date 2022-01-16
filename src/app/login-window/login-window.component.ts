@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MessageComponent } from '../message/message.component';
 import { AuthService } from '../auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -11,22 +12,48 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login-window.component.css']
 })
 
-export class LoginWindowComponent{
+export class LoginWindowComponent implements OnInit{
 
-  public email:string ='';
-  public password:string='';
+  public form: FormGroup;
+  public submitted: boolean=false;
 
-  constructor(private authservice:AuthService, private router:Router) { 
-    if(this.authservice.logIn){
-       this.router.navigate(['/']);
+  constructor(private formBuilder: FormBuilder, private authservice: AuthService, private router:Router) { 
+    this.form=this.formBuilder.group({
+      password:['',[Validators.required, 
+      Validators.minLength(8)]],
+      email:['',[Validators.required, 
+      Validators.email]],
+    })
+  }
+
+  onSend(event: Event){
+    event.preventDefault;
+    if(this.form.valid){
+      alert("todo pillo")
+    }
+    else{
+      this.form.markAllAsTouched;
     }
   }
 
-  login(){
-    this.authservice.login(this.email, this.password);
+  get Password(){
+    return this.form.get("password");
+  }
+ 
+  get Mail(){
+   return this.form.get("email");
   }
 
-  ngOnInit(): void {
+  get PasswordValid(){
+    return this.Password?.touched && !this.Password?.valid;
+  }
+
+  get MailValid() {
+    return false
+  }
+
+
+  ngOnInit(){
   }
 
 }

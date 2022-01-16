@@ -6,12 +6,14 @@ import { LoginWindowComponent } from '../login-window/login-window.component';
 import { ErrorPageComponent } from '../error-page/error-page.component';
 import { ProfileEditComponent } from '../profile-edit/profile-edit.component';
 import { AuthGuard } from '../auth.guard';
+import { HomeComponent } from '../home/home.component';
 
 const routes: Routes=[
-  {path: 'Home', component:AppComponent},
+  {path: 'Home', component:HomeComponent},
   {path: 'Login', component: LoginWindowComponent},
   {path: '', redirectTo:'/Home', pathMatch:'full'},
-  {path: '**',component:ErrorPageComponent},
+  {path: 'error', component: ErrorPageComponent},
+  {path: '**', redirectTo:'/error', pathMatch:'full'},
   {path: 'profile', component:ProfileEditComponent, canActivate:[AuthGuard]},
 ]
 @NgModule({
@@ -22,4 +24,4 @@ const routes: Routes=[
     RouterModule
   ]
 })
-export class AppRouting{}
+export class AppRoutingModule{}

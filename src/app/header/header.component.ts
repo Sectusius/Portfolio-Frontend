@@ -1,6 +1,6 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppRouting } from '../app-routing.module.ts/app-routing.module.ts.module';
+import { AppRoutingModule } from '../app-routing.module.ts/app-routing.module.ts.module';
 import { AuthGuard } from '../auth.guard';
 import { AuthService } from '../auth.service';
 
