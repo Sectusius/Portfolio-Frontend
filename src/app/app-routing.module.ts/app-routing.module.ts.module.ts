@@ -12,9 +12,8 @@ const routes: Routes=[
   {path: 'Home', component:HomeComponent},
   {path: 'Login', component: LoginWindowComponent},
   {path: '', redirectTo:'/Home', pathMatch:'full'},
-  {path: 'error', component: ErrorPageComponent},
-  {path: '**', redirectTo:'/error'},
   {path: 'profile', component:ProfileEditComponent, canActivate:[AuthGuard]},
+  {path: '**', component: ErrorPageComponent}
 ]
 @NgModule({
   declarations: [],
