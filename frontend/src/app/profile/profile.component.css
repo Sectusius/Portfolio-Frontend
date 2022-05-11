@@ -6,12 +6,17 @@
     align-content: center;  
     position: relative;
 }
-img.background-pic{
+.background-pic-container{
     margin: 10px 0px 0px 0px;
+    height: 300px;
+    width: 98%;
+}
+img.background-pic{
     border-top-left-radius: 20px; 
     border-top-right-radius: 20px; 
-    height: 300px;
-    width: 1240px;
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 .profile-picture{
     margin: 10px;
