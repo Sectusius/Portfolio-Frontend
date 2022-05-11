@@ -1,0 +1,30 @@
+.profile-background{
+    display: flex;
+    margin: 0px 10px 10px 10px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;  
+    position: relative;
+}
+img.background-pic{
+    margin: 10px 0px 0px 0px;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; 
+    height: 300px;
+    width: 1240px;
+}
+.profile-picture{
+    margin: 10px;
+    padding: 200px 0 0 0;
+}
+img.profile-pic{
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+}
+.profile_text{
+    margin-top: 40px;
+    margin-left: 10px;
+}
