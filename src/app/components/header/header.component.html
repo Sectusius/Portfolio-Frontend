@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+<header class="page-header">
+    <p> Ian Petraccaro Cantero </p>
+    <p>
+        <a href="https://twitter.com/Sectusius/" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/Sectusius/" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://www.instagram.com/maquineman/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <button class="login-button" routerLink="/Login" *ngIf="!(auth.logIn)">LOGIN</button>
+        <button class="login-button" *ngIf="auth.logIn">LOGOUT</button>
+    </p>
+</header>
