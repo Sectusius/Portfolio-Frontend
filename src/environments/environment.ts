@@ -5,6 +5,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 export const environment = {
+  baseApiUrl:'http://localhost:3000/api',
   production: true,
   firebaseConfig : {
     apiKey: "AIzaSyBlerJIUkAU2Is5SRn9XRti89R6hCyASbw",

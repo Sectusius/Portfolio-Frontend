@@ -23,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { environment } from "../environments/environment";
+import { RegisterPageComponent } from './components/register-page/register-page.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { environment } from "../environments/environment";
     ScrollToTopComponent,
     ProfileEditComponent,
     HomeComponent,
+    RegisterPageComponent,
   ],
   imports: [
     FormsModule,

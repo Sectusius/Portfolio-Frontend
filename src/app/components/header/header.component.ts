@@ -26,8 +26,14 @@ export class HeaderComponent{
     this.router.navigateByUrl('/Login');
   }
 
+  isLogged(){
+    return this.auth.loggedIn();
+  }
 
-  
+  logOut() {
+    this.auth.logout()
+  }
+
   ngOnInit(): void {
   }
 

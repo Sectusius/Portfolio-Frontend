@@ -1,49 +1,30 @@
-<div>
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>
-           Iniciar Sesion
-        </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <form [formGroup]="form" (ngSubmit)="onSend($event)">
-            <div>
-            <mat-form-field>
-                <input matInput placeholder="Email" type="email" name="email" formControlName="email" required>
-            </mat-form-field>
-            <div *ngIf="Mail?.errors && Mail?.touched">
-                <p *ngIf="Mail?.hasError('required')" class="error">
-                    Mail required.
-                </p>
-                <p *ngIf="Mail?.hasError('email')" class="error">
-                    Invalid format.
-                </p>
-            </div>
-            </div>
-            <div>
-            <mat-form-field>
-                <input matInput placeholder="Password" type="password" formControlName="password" required>
-            </mat-form-field>
-            <div *ngIf="Password?.hasError && Password?.touched">
-                    <p *ngIf="Password?.hasError('required')" class="error">
-                      Password Required.
-                    </p>
-                    <p *ngIf="Password?.errors?.['minlength'] "class="error">
-                      The password requires more than 8 characters.
-                    </p>
-            </div>
-            </div>
-            <br>
-        <div>
-            <a routerLink="/Home">Forgot password?</a>
-            <a routerLink="/Home">Sign up</a>   
-        </div>
-        <br>
-        <div>
-            <button class="login-button" type="submit">Confirm</button>
-            <button class="login-button" routerLink="/Home">Go Back</button>
-        </div>
-    </form>
-    </mat-card-content>
-</mat-card>
+<div class="mt-5 container">
+  <div class="row mx-auto">
+    <div class="card">
+      <h4 class="card-header">Iniciar Sesion</h4>
+      <div class="card-body">
+        <form (submit)="logIn()">
+          <div class="form-group">
+            <label for="cuil"> Nombre de usuario</label>
+            <div></div>
+            <input type="text" [(ngModel)]="user.username" name="username" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="password"> Contraseña </label>
+            <div></div>
+            <input type="password" [(ngModel)]="user.password" name="password" class="form-control" />
+          </div>
+          <div>
+            <span style="color:red;">{{errorMsg}}</span>
+          </div>
+          <div class="register-buttons">
+            <button type="submit" class="btn btn-primary btn-block">
+              Iniciar Sesion
+            </button>
+            <a routerLink="/Home" class="btn btn-link"> Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

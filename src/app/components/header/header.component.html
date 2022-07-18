@@ -5,7 +5,8 @@
         <a href="https://twitter.com/Sectusius/" target="_blank"><i class="fa fa-twitter"></i></a>
         <a href="https://github.com/Sectusius/" target="_blank"><i class="fa fa-github"></i></a>
         <a href="https://www.instagram.com/maquineman/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <button class="login-button" routerLink="/Login" *ngIf="!(auth.logIn)">LOGIN</button>
-        <button class="login-button" *ngIf="auth.logIn">LOGOUT</button>
+        <button class="login-button" routerLink="/Login" *ngIf="!isLogged()">LOGIN</button>
+        <button class="login-button" routerLink="/Register" *ngIf="!isLogged()">REGISTRARSE</button>
+        <button class="login-button" *ngIf="isLogged()" (click)="logOut()">LOGOUT</button>
     </p>
 </header>

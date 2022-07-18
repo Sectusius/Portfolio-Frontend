@@ -14,44 +14,29 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class LoginWindowComponent implements OnInit{
 
-  public form: FormGroup;
+  user={
+    username: '',
+    password:'',
+    role:1,
+  }
+
   public submitted: boolean=false;
+  errorMsg="";
 
-  constructor(private formBuilder: FormBuilder, private authservice: AuthService, private router:Router) { 
-    this.form=this.formBuilder.group({
-      password:['',[Validators.required, 
-      Validators.minLength(8)]],
-      email:['',[Validators.required, 
-      Validators.email]],
-    })
+  constructor(private authservice: AuthService, private router:Router) { 
   }
 
-  onSend(event: Event){
-    event.preventDefault;
-    if(this.form.valid){
-      alert("todo pillo")
-    }
-    else{
-      this.form.markAllAsTouched;
-    }
+  logIn(){
+    this.authservice.signIn(this.user).subscribe(
+      (res) => {
+        localStorage.setItem('token', res.token);
+        this.router.navigate(["/Home"]);
+      },
+      (err) => {
+        this.errorMsg="El Nombre de usuario o la contraseña es invalido";
+      }
+    )
   }
-
-  get Password(){
-    return this.form.get("password");
-  }
- 
-  get Mail(){
-   return this.form.get("email");
-  }
-
-  get PasswordValid(){
-    return this.Password?.touched && !this.Password?.valid;
-  }
-
-  get MailValid() {
-    return false
-  }
-
 
   ngOnInit(){
   }

@@ -7,10 +7,12 @@ import { ErrorPageComponent } from '../components/error-page/error-page.componen
 import { ProfileEditComponent } from '../components/profile-edit/profile-edit.component';
 import { AuthGuard } from '../auth.guard';
 import { HomeComponent } from '../components/home/home.component';
+import { RegisterPageComponent } from 'app/components/register-page/register-page.component';
 
 const routes: Routes=[
   {path: 'Home', component:HomeComponent},
   {path: 'Login', component: LoginWindowComponent},
+  {path: 'Register', component: RegisterPageComponent},
   {path: '', redirectTo:'/Home', pathMatch:'full'},
   {path: 'Profile', component:ProfileEditComponent, canActivate:[AuthGuard]},
   {path: '**', component: ErrorPageComponent}

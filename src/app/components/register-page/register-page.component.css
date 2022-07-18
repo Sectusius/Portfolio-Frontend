@@ -1,0 +1,44 @@
+.card {
+    padding: 2rem;
+    width: 35rem;
+    margin: auto;
+    line-height: 2rem;
+    box-shadow: 0px 5px 20px rgb(0, 0, 0);
+}
+  
+.card-header {
+    text-align: center;
+    color: black;
+    width: 94%;
+    margin:auto;
+}
+  
+input {
+    width: 100%;
+}
+  
+.form-group {
+    margin-bottom: 1rem;
+}
+  
+
+.mat-radio-button {
+    margin-right: 1rem;
+}
+  
+.columnaDerecha {
+    width: 100%;
+    float: right;
+    padding-left: 1rem;
+}
+  
+.grid {
+    width: 100%;
+}
+  
+.register-buttons {
+    line-height: 6rem;
+    width: 100%;
+    padding-left: 6rem;
+}
+  
