@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'environments/environment';
 import { AppRoutingModule } from '../../app-routing.module.ts/app-routing.module.ts.module';
 import { AuthGuard } from '../../auth.guard';
 import { AuthService } from '../../auth.service';
@@ -11,6 +13,8 @@ import { AuthService } from '../../auth.service';
 })
 export class HeaderComponent{
 
+  usuario: String=''
+
   header = {
     name: 'Ian Petraccaro Cantero',
     twitter_icon:'https://twitter.com/Sectusius/',
@@ -19,19 +23,31 @@ export class HeaderComponent{
     login_button:'LOGIN',
   }
 
+  private URL: string = 'https://portfolio-backend-petraccaro.herokuapp.com' + '/users'
 
-  constructor(private router:Router, public auth:AuthService) { }
+  constructor(private router:Router, public authService:AuthService, private http: HttpClient) { 
+    if (this.isLogged()) {
+      this.http.get(this.URL + '/user/' + this.authService.getId()).subscribe(
+        (user) => {
+           this.usuario=Object.entries(user).filter((e)=>e[0]=="username")[0][1]
+        },
+        (err) => {}
+      )
+      
+    }
+    console.log(this.isLogged())
+  }
 
   login(){
     this.router.navigateByUrl('/Login');
   }
 
   isLogged(){
-    return this.auth.loggedIn();
+    return this.authService.loggedIn();
   }
 
   logOut() {
-    this.auth.logout()
+    this.authService.logout()
   }
 
   ngOnInit(): void {

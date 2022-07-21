@@ -1,10 +1,15 @@
 <div class="profile-background">
     <div class="background-pic-container">
-        <img class=background-pic src="assets/Images/gator.jpg">
+        <img class="background-pic" [src]="backgroundImg.url"/>
+        <i *ngIf="!isAdmin()" class="fa fa-pencil" aria-hidden="true" (click)="updateBackgroundAttempt()"></i>
     </div>
-    <img class="profile-pic" src="assets/Images/gator.jpg">
-  </div>
-<div class="profile_text">
+    <div>
+        <img class="profile-pic" [src]="profileImg.url"/>
+        <i *ngIf="!isAdmin()" class="fa fa-pencil" aria-hidden="true" (click)="updateProfileAttempt()"></i>
+    </div>
+</div>
+
+    <div class="profile_text">
       <h2>
           Ian Petraccaro Cantero
       </h2>

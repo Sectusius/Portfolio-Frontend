@@ -1,27 +1,40 @@
-.page-header {
-    background-color:rgb(65, 60, 95);
-    height: 45px;
-    border: gray;
-    display: flex;
-    justify-items: right;
-    justify-content: space-between;
-    align-items: center;
-    text-orientation: sideways;
-    color: white;
-    margin: 0;
-}
 a, a:visited, a:hover, a:active{
     padding: 3px 3px 3px 3px;
     color:inherit;    
 }
-.login-button{
+.login-button {
     background-color: transparent;
     border: 0;
-    color: white;
+    color: #979797;
 }
-.login-button:hover{
+
+.login-button:hover {
     border-style: solid;
     border-color: black;
     background-color: black;
     color: white;
+}
+
+.bg-primary {
+    color: rgb(176, 176, 176) !important;
+    background-color: rgb(65, 60, 95) !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.dropdown-menu li {
+  position: relative;
+}
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
 }

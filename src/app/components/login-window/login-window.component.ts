@@ -29,6 +29,7 @@ export class LoginWindowComponent implements OnInit{
   logIn(){
     this.authservice.signIn(this.user).subscribe(
       (res) => {
+        console.log(res)
         localStorage.setItem('token', res.token);
         this.router.navigate(["/Home"]);
       },

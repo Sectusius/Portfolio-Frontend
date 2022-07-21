@@ -24,6 +24,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { environment } from "../environments/environment";
 import { RegisterPageComponent } from './components/register-page/register-page.component';
+import { PictureEditComponent } from './components/picture-edit/picture-edit.component';
+import { BackgroundEditComponent } from './components/background-edit/background-edit.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { RegisterPageComponent } from './components/register-page/register-page.
     ProfileEditComponent,
     HomeComponent,
     RegisterPageComponent,
+    PictureEditComponent,
+    BackgroundEditComponent,
   ],
   imports: [
     FormsModule,

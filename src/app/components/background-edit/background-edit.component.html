@@ -1,7 +1,7 @@
-<form (submit)="uploadProfile()" ngNativeValidate>
+<form (submit)="uploadBackground()" ngNativeValidate>
     <mat-card class="noticia">
         <p class="fotoHint" style="font-size: 20px; color: #263238">
-            <i>Selecciona una nueva foto de perfil</i>
+            <i>Selecciona la nueva foto de portada</i>
           </p>
           <input
             type="file"
@@ -12,7 +12,7 @@
             required
           />
           <mat-card-actions class="opciones">
-            <button mat-raised-button class="boton" type="submit" [mat-dialog-close]="profileImg.url">
+            <button mat-raised-button class="boton" type="submit" [mat-dialog-close]="backgroundImg.url">
               Guardar cambios
             </button>
             <button mat-raised-button class="boton" routerLink="/Home" [mat-dialog-close]="false">

@@ -1,12 +1,34 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
-<header class="page-header">
-    <p> Ian Petraccaro Cantero </p>
-    <p>
-        <a href="https://twitter.com/Sectusius/" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="https://github.com/Sectusius/" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.instagram.com/maquineman/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <button class="login-button" routerLink="/Login" *ngIf="!isLogged()">LOGIN</button>
-        <button class="login-button" routerLink="/Register" *ngIf="!isLogged()">REGISTRARSE</button>
-        <button class="login-button" *ngIf="isLogged()" (click)="logOut()">LOGOUT</button>
-    </p>
-</header>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">   
+
+<nav mat-toolbar class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Ian Petraccaro Cantero </a>
+        <div class="collapse navbar-collapse" >
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://twitter.com/Sectusius/" target="_blank"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/Sectusius/" target="_blank"><i class="fa fa-github"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/maquineman/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav" *ngIf="isLogged()">
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">{{usuario}}</a>
+                    <div class="dropdown-menu">
+                        <a mat-button class="dropdown-item" (click)="logOut()">Cerrar Sesion</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav" *ngIf="!isLogged()">
+                <a mat-button class="nav-link" routerLink="/Login">Iniciar Sesion</a>
+                <a mat-button class="nav-link" routerLink="/Register">REGISTRARSE</a>
+            </ul>
+
+    </div>
+</div>
+</nav>
