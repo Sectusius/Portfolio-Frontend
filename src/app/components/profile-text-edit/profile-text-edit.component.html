@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>
+    Portfolio - Petraccaro Cantero Ian
+</title>
+<head>  
+    <meta charset="utf-8">
+</head>
+<app-header></app-header>
+<body>
+    <app-scroll-to-top></app-scroll-to-top>
+    <app-profile></app-profile> 
+    <app-navigation-header></app-navigation-header>
+    <h2 id="acerca_de">Acerca de</h2>
+    <form (submit)="uploadAbout()" ngNativeValidate>
+        <mat-card class="noticia">
+          <mat-card-header class="titulo-holder" style="font-size: 30px">
+            <input
+              class="titulo-texto"
+              [(ngModel)]="about.textBody"
+              name="title"
+              contenteditable="true"
+            />
+          </mat-card-header>
+        <mat-card-actions class="opciones">
+          <button mat-raised-button class="boton" type="submit">
+            Guardar
+          </button>
+          <button mat-raised-button class="boton" routerLink="/Home">
+            Cancelar
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    <h2 id="experiencia">Experiencia</h2>
+    <form (submit)="uploadExperience()" ngNativeValidate>
+        <mat-card class="noticia">
+          <mat-card-header class="titulo-holder" style="font-size: 30px">
+            <input
+              class="titulo-texto"
+              [(ngModel)]="experience.textBody"
+              name="title"
+              contenteditable="true"
+            />
+          </mat-card-header>
+        <mat-card-actions class="opciones">
+          <button mat-raised-button class="boton" type="submit">
+            Guardar
+          </button>
+          <button mat-raised-button class="boton" routerLink="/Home">
+            Cancelar
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    <h2 id="educacion">Educación</h2>
+    <form (submit)="uploadEducation()" ngNativeValidate>
+        <mat-card class="noticia">
+          <mat-card-header class="titulo-holder" style="font-size: 30px">
+            <input
+              class="titulo-texto"
+              [(ngModel)]="education.textBody"
+              name="title"
+              contenteditable="true"
+            />
+          </mat-card-header>
+        <mat-card-actions class="opciones">
+          <button mat-raised-button class="boton" type="submit">
+            Guardar
+          </button>
+          <button mat-raised-button class="boton" routerLink="/Home">
+            Cancelar
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    <h2 id="hard_soft_skills">Hard & Soft skills</h2>
+    <form (submit)="uploadSkills()" ngNativeValidate>
+        <mat-card class="noticia">
+          <mat-card-header class="titulo-holder" style="font-size: 30px">
+            <input
+              class="titulo-texto"
+              [(ngModel)]="skills.textBody"
+              name="title"
+              contenteditable="true"
+            />
+          </mat-card-header>
+        <mat-card-actions class="opciones">
+          <button mat-raised-button class="boton" type="submit">
+            Guardar
+          </button>
+          <button mat-raised-button class="boton" routerLink="/Home">
+            Cancelar
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+    <h2 id="proyectos">Proyectos</h2>
+    <form (submit)="uploadProyects()" ngNativeValidate>
+        <mat-card class="noticia">
+          <mat-card-header class="titulo-holder" style="font-size: 30px">
+            <input
+              class="titulo-texto"
+              [(ngModel)]="proyects.textBody"
+              name="title"
+              contenteditable="true"
+            />
+          </mat-card-header>
+        <mat-card-actions class="opciones">
+          <button mat-raised-button class="boton" type="submit">
+            Guardar
+          </button>
+          <button mat-raised-button class="boton" routerLink="/Home">
+            Cancelar
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+</body>

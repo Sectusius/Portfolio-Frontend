@@ -8,13 +8,14 @@ import { ProfileEditComponent } from '../components/profile-edit/profile-edit.co
 import { AuthGuard } from '../auth.guard';
 import { HomeComponent } from '../components/home/home.component';
 import { RegisterPageComponent } from 'app/components/register-page/register-page.component';
+import { ProfileTextEditComponent } from 'app/components/profile-text-edit/profile-text-edit.component';
 
 const routes: Routes=[
   {path: 'Home', component:HomeComponent},
   {path: 'Login', component: LoginWindowComponent},
   {path: 'Register', component: RegisterPageComponent},
   {path: '', redirectTo:'/Home', pathMatch:'full'},
-  {path: 'Profile', component:ProfileEditComponent, canActivate:[AuthGuard]},
+  {path:'edit', component:ProfileTextEditComponent, canActivate:[AuthGuard]},
   {path: '**', component: ErrorPageComponent}
 ]
 @NgModule({

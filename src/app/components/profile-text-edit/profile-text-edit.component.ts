@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthService } from 'app/auth.service';
 
@@ -10,14 +9,11 @@ interface Texto{
 }
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-profile-text-edit',
+  templateUrl: './profile-text-edit.component.html',
+  styleUrls: ['./profile-text-edit.component.css']
 })
-
-
-
-export class HomeComponent implements OnInit {
+export class ProfileTextEditComponent implements OnInit {
 
   private URL = 'https://portfolio-backend-petraccaro.herokuapp.com'+'/text'
 
@@ -64,7 +60,58 @@ export class HomeComponent implements OnInit {
     )
   }
 
+  uploadAbout(){
+    console.log(this.about)
+    this.http.post<any>(this.URL + '/uploadText', this.about).subscribe(
+      (res) => {
+        console.log(res)
+      },
+      (err) => {
+        console.log(err)
+      }
+    )
+  }
 
+  uploadExperience(){
+    this.http.post<any>(this.URL + '/uploadText', this.experience).subscribe(
+      (res) => {
+        console.log(res)
+      },
+      (err) => {
+        console.log(err)
+      }
+    )
+  }
+  uploadProyects(){
+    this.http.post<any>(this.URL + '/uploadText', this.proyects).subscribe(
+      (res) => {
+        console.log(res)
+      },
+      (err) => {
+        console.log(err)
+      }
+    )
+  }
+  uploadSkills(){
+    this.http.post<any>(this.URL + '/uploadText', this.skills).subscribe(
+      (res) => {
+        console.log(res)
+      },
+      (err) => {
+        console.log(err)
+      }
+    )
+  }
+  uploadEducation(){
+    this.http.post<any>(this.URL + '/uploadText', this.education).subscribe(
+      (res) => {
+        console.log(res)
+      },
+      (err) => {
+        console.log(err)
+      }
+    )
+  }
 
   ngOnInit(): void {
   }

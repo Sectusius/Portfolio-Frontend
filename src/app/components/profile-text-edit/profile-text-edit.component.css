@@ -1,0 +1,67 @@
+.contenedor {
+    margin: auto;
+    min-height: 70%;
+    width: 50%;
+    margin-top: 3rem;
+    background-color: rgb(127, 121, 165);
+    align-self: center;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    box-shadow: 0px 5px 20px rgb(0, 0, 0);
+  }
+  
+  .categoria {
+    padding-bottom: 20px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .noticia {
+    background-color: rgb(127, 121, 165);
+    min-height: 90%;
+  }
+  
+  .titulo-texto {
+    width: 90%;
+    margin-bottom: 3rem;
+  }
+  
+  .titulo-holder {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .cuerpo {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .upload {
+    margin-bottom: 2rem;
+  }
+  
+  .fotoHint {
+    padding-left: 1rem;
+  }
+  
+  input:placeholder-shown {
+    font-style: italic;
+  }
+  
+  textarea:placeholder-shown {
+    font-style: italic;
+  }
+  
+  .opciones {
+    margin: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .boton {
+    width: 120px;
+    font-size:15px;
+    background-color:rgb(184, 175, 241);
+  }

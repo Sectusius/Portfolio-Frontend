@@ -26,6 +26,7 @@ import { environment } from "../environments/environment";
 import { RegisterPageComponent } from './components/register-page/register-page.component';
 import { PictureEditComponent } from './components/picture-edit/picture-edit.component';
 import { BackgroundEditComponent } from './components/background-edit/background-edit.component';
+import { ProfileTextEditComponent } from './components/profile-text-edit/profile-text-edit.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { BackgroundEditComponent } from './components/background-edit/background
     RegisterPageComponent,
     PictureEditComponent,
     BackgroundEditComponent,
+    ProfileTextEditComponent,
   ],
   imports: [
     FormsModule,
