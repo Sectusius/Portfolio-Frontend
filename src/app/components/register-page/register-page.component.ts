@@ -15,7 +15,7 @@ export class RegisterPageComponent implements OnInit {
     username:'',
     email:'',
     password:'',
-    role:'1',
+    role:'0',
   }
 
   errorMsg='';
