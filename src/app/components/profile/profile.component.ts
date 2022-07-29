@@ -22,10 +22,16 @@ export class ProfileComponent implements OnInit {
   profileImg: image={url:"", des:"profile"}
   backgroundImg: image={url:"", des:"background"}
 
-  role=1;
+  role:number
 
   constructor(public popup: MatDialog,private http: HttpClient, private authService: AuthService,private router: Router) {
     this.fetchData();
+    this.role=0;
+    if(this.authService.loggedIn()){
+      this.authService.getUser().subscribe((user)=>{
+        this.role=user.role;
+      })
+    }
   }
 
   private fetchData(){
@@ -79,12 +85,7 @@ export class ProfileComponent implements OnInit {
    }
 
   isAdmin () : boolean {
-    if(this.authService.loggedIn()){
-      this.authService.getUser().subscribe((user)=>{
-        return user.role==1;
-      })
-    }
-    return false
+    return this.role==1;
   }
 
   ngOnInit(): void {

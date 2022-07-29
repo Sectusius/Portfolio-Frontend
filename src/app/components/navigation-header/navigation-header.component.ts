@@ -8,13 +8,25 @@ import { AuthService } from 'app/auth.service';
 })
 export class NavigationHeaderComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+
+  role:number;
+
+  constructor(private authService: AuthService) {
+    this.role=0;
+    if(this.authService.loggedIn()){
+      this.authService.getUser().subscribe((user)=>{
+        this.role=user.role;
+      })
+    }
+  }
 
   isLogged(){
     return this.authService.loggedIn();
   }
 
-
+  isAdmin () : boolean {
+    return this.role==1;
+  }
   ngOnInit(): void {
   }
 

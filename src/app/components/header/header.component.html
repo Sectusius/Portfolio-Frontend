@@ -16,13 +16,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav" *ngIf="isLogged()">
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">{{usuario}}</a>
-                    <div class="dropdown-menu">
-                        <a mat-button class="dropdown-item" (click)="logOut()">Cerrar Sesion</a>
-                    </div>
-                </li>
+                <a mat-button class="dropdown-item" (click)="logOut()">Cerrar Sesion</a>
             </ul>
             <ul class="navbar-nav" *ngIf="!isLogged()">
                 <a mat-button class="nav-link" routerLink="/Login">Iniciar Sesion</a>

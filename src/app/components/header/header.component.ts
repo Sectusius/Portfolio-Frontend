@@ -15,13 +15,6 @@ export class HeaderComponent{
 
   usuario: String=''
 
-  header = {
-    name: 'Ian Petraccaro Cantero',
-    twitter_icon:'https://twitter.com/Sectusius/',
-    github_icon:'https://github.com/Sectusius/',
-    instagram_icon:'https://www.instagram.com/maquineman/',
-    login_button:'LOGIN',
-  }
 
   private URL: string = 'https://portfolio-backend-petraccaro.herokuapp.com' + '/users'
 
@@ -33,14 +26,9 @@ export class HeaderComponent{
         },
         (err) => {}
       )
-      
     }
-    console.log(this.isLogged())
   }
 
-  login(){
-    this.router.navigateByUrl('/Login');
-  }
 
   isLogged(){
     return this.authService.loggedIn();

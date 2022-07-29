@@ -1,16 +1,7 @@
-#acerca_de{
-}
-#proyectos{
-}
-#experiencia{
-
-}
-#educacion{
-
-}
-#hard_soft_skills{
-
-}
 main{
     font: bold;
+}
+
+.p{
+    white-space: pre-line;
 }

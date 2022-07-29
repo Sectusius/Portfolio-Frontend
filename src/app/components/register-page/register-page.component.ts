@@ -33,16 +33,19 @@ export class RegisterPageComponent implements OnInit {
           console.log(res);
         },
         (err)=>{
-          this.errorMsg="El mail ya se encuentra registrado";
+          this.errorMsg="El nombre de usuario ya se encuentra registrado";
           console.log(err);
         }
       )
+    }
+    else{
+      this.errorMsg = 'La contraseña debe tener entre 6-20 caracteres, una mayúscula, una minúscula, y un caracter especial'
     }
   }
 
 
   private isValidPassword(): Boolean{
-    const regex= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/
+    const regex= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,20}$/
     return regex.test(this.user.password)
   }
 
